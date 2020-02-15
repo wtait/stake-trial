@@ -21,5 +21,8 @@
   "homepage": "https://github.com/wtait/stake-trial#readme",
   "dependencies": {
     "@openzeppelin/contracts": "^2.5.0"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-environment": "^0.1.2"
   }
 }
