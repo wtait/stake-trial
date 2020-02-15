@@ -129,6 +129,9 @@ contract MTP {
         // addStakerToQeue
         // removeStaker
         // getStakeChainLength
+    function getStakeChainLength(uint256 tokenId) public returns (uint) {
+        return stakeChains[tokenId].length;
+    }
         // mtpTransfer
         // pauseTransfer
 
