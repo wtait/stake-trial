@@ -26,6 +26,10 @@ contract MTP {
     // stakers
     // balances
     // stakeChain
+    // stakeQueu
+
+    //struct Staker
+    //struct Token
 
 // Events
     //StakerAdded
@@ -39,6 +43,16 @@ contract MTP {
 
 // Functions
 
+    // depositToken
+    // withdrawToken
+    // addStaker
+    // addStakerToQeue
+    // removeStaker
+    // isMTPToken
+    // getStakeChainLength
+    // mtpTransfer
+    // pauseTransfer
+    // updateBiboBalances
 
 
 
