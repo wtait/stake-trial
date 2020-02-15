@@ -1,9 +1,9 @@
 pragma solidity ^0.5.12;
 
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol";
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721Mintable.sol";
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721Metadata.sol";
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721Burnable.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721Full.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721Mintable.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721Metadata.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721Burnable.sol";
 
 
 contract TestNFT is ERC721Full, ERC721Mintable{
