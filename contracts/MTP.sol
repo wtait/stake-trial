@@ -46,41 +46,41 @@ contract MTP {
         event StakerAdded(
             address indexed StakerAddress,
             uint indexed numberOfStakers
-        )
+        );
     //TokenAdded
         event TokenAdded(
             address indexed tokenContractAddress,
             address indexed tokenOwner,
             uint256 indexed tokenID
-        )
+        );
     //newMTPTransfer
         event NewMTPTransfer(
             address indexed tokenContractAddress,
             uint256 indexed tokenID,
             address indexed tokenReceiver,
             address indexed tokenSender
-        )
+        );
     //TokenTranferPaused
         event TokenTransferPaused(
             uint256 indexed tokenID,
             address indexed tokenHolder
-        )
+        );
     //TokenTransferUnpaused
         event TokenTransferUnpaused(
             uint256 indexed tokenID,
             address indexed tokenHolder
-        )
+        );
     //TokenWithdrawn
         event TokenWithdrawal(
             address indexed tokenContractAddress,
             address indexed tokenOwner,
             uint256 indexed tokenID
-        )
+        );
     //StakerRemoved
         event StakerRemoved(
             address indexed StakerAddress,
             uint indexed numberOfStakers
-        )
+        );
     //newMTPNetworkDeployed
     //newProxyFactoryDeployed
     //ProxyCreated
