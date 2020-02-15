@@ -75,6 +75,10 @@ contract MTP {
             uint256 indexed tokenID
         )
     //StakerRemoved
+        event StakerRemoved(
+            address indexed StakerAddress,
+            uint indexed numberOfStakers
+        )
     //newMTPNetworkDeployed
     //newProxyFactoryDeployed
     //ProxyCreated
