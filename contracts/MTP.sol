@@ -1,16 +1,19 @@
+// Pragma statements
 pragma solidity 0.5.12;
 
+// Import statements
 import "../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/IERC721.sol";
 
-// Pragma statements
-// Import statements
+
+
 // Interfaces
 // Libraries
 // Contracts
 
 contract MTP {
 
+    //constructor
     constructor() public {
         // ...
     }
@@ -25,6 +28,15 @@ contract MTP {
     // stakeChain
 
 // Events
+    //StakerAdded
+    //TokenAdded
+    //newMTPTransfer
+    //newMTPNetworkDeployed
+    //newProxyFactoryDeployed
+    //ProxyCreated
+
+    
+
 // Functions
 
 
