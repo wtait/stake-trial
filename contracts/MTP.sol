@@ -64,6 +64,10 @@ contract MTP {
             address indexed tokenHolder
         )
     //TokenTransferUnpaused
+        event TokenTransferUnpaused(
+            uint256 indexed tokenID,
+            address indexed tokenHolder
+        )
     //newMTPNetworkDeployed
     //newProxyFactoryDeployed
     //ProxyCreated
