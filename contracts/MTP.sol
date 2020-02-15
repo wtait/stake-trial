@@ -116,7 +116,8 @@ contract MTP {
         stakeChain[tokenId].push(tokenOwner);
     }
         // withdrawToken
-        
+
+
     function addStaker(address stakerAddress_) public {
         balances[stakerAddress_] = 0;
         stakers[stakerAddress_] = Staker(
@@ -142,5 +143,17 @@ contract MTP {
     // Private functions
     //private - can be accessed only from this contract
         // updateBiboBalances
+
+    function updateBiboBalances(uint256 tokenId) private {
+        address[] memory tokenStakeChain = stakeChain[tokenId];
+
+        for(uint i = 0; i < tokenStakeChain.length; i++) {
+            address currentStakerAddress = tokenStakeChain[i];
+            uint stakersBefore = i;
+            uint stakersAfter = tokenStakeChain.length - (i + 1);
+            int  stakerNewStakes = int256(stakersAfter) - int256(stakersBefore);
+            balances[currentStakerAddress] += stakerNewStakes;
+        }
+    }
 }
 
