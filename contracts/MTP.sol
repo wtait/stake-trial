@@ -42,6 +42,10 @@ contract MTP {
 
 // Events
     //StakerAdded
+        event StakerAdded(
+            address indexed takerAddress,
+            uint indexed numberOfStakers
+        )
     //TokenAdded
     //newMTPTransfer
     //newMTPNetworkDeployed
