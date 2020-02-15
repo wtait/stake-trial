@@ -22,11 +22,12 @@ contract MTP {
 
 // Type declarations
 // State variables
-    // tokens
-    // stakers
-    // balances
-    // stakeChain
-    // stakeQueu
+    mapping(uint256 => Token) public tokens;//maps token id to token struct
+    mapping(address => Staker) public stakers;
+    mapping(address => int256) public balances; //bibo balances. can be positive or negative;
+    mapping(uint256 => address[]) public stakeChain;  //maps a token id to an array of staker addresses
+    mapping(uint256 => address[]) public stakeQueu; //pending transfer callers of token when paused
+
 
     //struct Staker
     //struct Token
