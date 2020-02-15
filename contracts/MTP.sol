@@ -68,6 +68,13 @@ contract MTP {
             uint256 indexed tokenID,
             address indexed tokenHolder
         )
+    //TokenWithdrawn
+        event TokenWithdrawal(
+            address indexed tokenContractAddress,
+            address indexed tokenOwner,
+            uint256 indexed tokenID
+        )
+    //StakerRemoved
     //newMTPNetworkDeployed
     //newProxyFactoryDeployed
     //ProxyCreated
