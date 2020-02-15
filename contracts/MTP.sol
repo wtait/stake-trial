@@ -2,7 +2,6 @@
 pragma solidity 0.5.12;
 
 // Import statements
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/IERC721.sol";
 
 
@@ -59,6 +58,12 @@ contract MTP {
             address indexed tokenReceiver,
             address indexed tokenSender
         )
+    //TokenTranferPaused
+        event TokenTransferPaused(
+            uint256 indexed tokenID,
+            address indexed tokenHolder
+        )
+    //TokenTransferUnpaused
     //newMTPNetworkDeployed
     //newProxyFactoryDeployed
     //ProxyCreated
