@@ -50,9 +50,15 @@ contract MTP {
         event TokenAdded(
             address indexed tokenContractAddress,
             address indexed tokenOwner,
-            uint256 tokenID
+            uint256 indexed tokenID
         )
     //newMTPTransfer
+        event NewMTPTransfer(
+            address indexed tokenContractAddress,
+            uint256 indexed tokenID,
+            address indexed tokenReceiver,
+            address indexed tokenSender
+        )
     //newMTPNetworkDeployed
     //newProxyFactoryDeployed
     //ProxyCreated
