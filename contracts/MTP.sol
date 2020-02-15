@@ -11,14 +11,23 @@ import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/IERC721.sol
 
 contract MTP {
 
-// Type declarations
-// State variables
-// Events
-// Functions
-
     constructor() public {
         // ...
     }
+
+    IERC721 public ERC721Interface;
+
+// Type declarations
+// State variables
+    // tokens
+    // stakers
+    // balances
+    // stakeChain
+
+// Events
+// Functions
+
+
 
 
     // External functions
