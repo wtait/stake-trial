@@ -29,8 +29,16 @@ contract MTP {
     mapping(uint256 => address[]) public stakeQueu; //pending transfer callers of token when paused
 
 
-    //struct Staker
-    //struct Token
+    struct Staker { //change to TokenStaker
+        address staker_Address_; //redundant
+        int staker_Stake_Balance_; //must support negative integers
+    }
+
+    struct Token {
+        address token_Address_; //this is redundant
+        uint256 token_id_; //for nft tokens
+        uint token_Stake_Balance_;
+    }
 
 // Events
     //StakerAdded
