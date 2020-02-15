@@ -1,5 +1,5 @@
 // Pragma statements
-pragma solidity 0.5.12;
+pragma solidity ^0.5.12;
 
 // Import statements
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";

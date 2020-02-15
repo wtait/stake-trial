@@ -21,7 +21,10 @@
   "homepage": "https://github.com/wtait/stake-trial#readme",
   "dependencies": {
     "@openzeppelin/contracts": "^2.5.0",
-    "@openzeppelin/test-helpers": "^0.5.4"
+    "@openzeppelin/test-helpers": "^0.5.4",
+    "openzeppelin-eth": "^2.2.0",
+    "openzeppelin-solidity": "^2.3.0",
+    "solc": "^0.6.2"
   },
   "devDependencies": {
     "@openzeppelin/test-environment": "^0.1.2",
