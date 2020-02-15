@@ -37,6 +37,8 @@ contract MTP {
         address token_Address_; //this is redundant
         uint256 token_id_; //for nft tokens
         uint token_Stake_Balance_;
+        //bool isPausable?
+        //bool isPaused?
     }
 
 // Events
