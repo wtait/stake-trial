@@ -58,7 +58,7 @@ contract MTP {
             address indexed tokenContractAddress,
             uint256 indexed tokenID,
             address indexed tokenReceiver,
-            address indexed tokenSender
+            address tokenSender
         );
     //TokenTranferPaused
         event TokenTransferPaused(
