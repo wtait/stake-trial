@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/wtait/stake-trial/issues"
   },
-  "homepage": "https://github.com/wtait/stake-trial#readme"
+  "homepage": "https://github.com/wtait/stake-trial#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.5.0"
+  }
 }
