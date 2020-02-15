@@ -101,6 +101,15 @@ contract MTP {
         // depositToken
         // withdrawToken
         // addStaker
+    function addStaker(address stakerAddress_) public {
+        balances[stakerAddress_] = 0;
+        stakers[stakerAddress_] = Staker(
+            {
+                staker_Address_: stakerAddress_,
+                staker_Stake_Balance_: 0
+            }
+        );
+    }
         // addStakerToQeue
         // removeStaker
         // getStakeChainLength
