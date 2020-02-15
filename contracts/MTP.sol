@@ -2,7 +2,7 @@
 pragma solidity 0.5.12;
 
 // Import statements
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 
 
 
