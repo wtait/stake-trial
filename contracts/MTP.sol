@@ -101,8 +101,22 @@ contract MTP {
     // Public functions
     //public - all can accesscontract
         // depositToken
+    function depositToken(address contractAddress, address tokenOwner, uint256 tokenId) public {
+        if(stakers[tokenOwner].staker_Address_ != tokenOwner) {
+            addStaker(tokenOwner);
+        }
+        if(stakers[contractAddress].staker_Address_ != contractAddress) {
+            addStaker(contractAddress);
+        }
+        Token storage t_ = tokens[tokenId];
+        t_.token_Address_ = contractAddress;
+        t_.token_id_ = tokenId;
+        t_.token_Stake_Balance_ = 1;
+        stakeChain[tokenId].push(contractAddress);
+        stakeChain[tokenId].push(tokenOwner);
+    }
         // withdrawToken
-        // addStaker
+        
     function addStaker(address stakerAddress_) public {
         balances[stakerAddress_] = 0;
         stakers[stakerAddress_] = Staker(
