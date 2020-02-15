@@ -39,25 +39,12 @@ contract MTP {
     //newProxyFactoryDeployed
     //ProxyCreated
 
-    
+
 
 // Functions
 
-    // depositToken
-    // withdrawToken
-    // addStaker
-    // addStakerToQeue
-    // removeStaker
-    // isMTPToken
-    // getStakeChainLength
-    // mtpTransfer
-    // pauseTransfer
-    // updateBiboBalances
-
-
-
     // External functions
-    // ...
+    // external - Cannot be accessed internally, only externally
 
     // External functions that are view
     // ...
@@ -66,12 +53,22 @@ contract MTP {
     // ...
 
     // Public functions
-    // ...
+    //public - all can accesscontract
+        // depositToken
+        // withdrawToken
+        // addStaker
+        // addStakerToQeue
+        // removeStaker
+        // getStakeChainLength
+        // mtpTransfer
+        // pauseTransfer
 
     // Internal functions
-    // ...
+    //internal - only this  and contracts deriving from it can access
+        // isMTPToken
 
     // Private functions
-    // ...
+    //private - can be accessed only from this contract
+        // updateBiboBalances
 }
 
