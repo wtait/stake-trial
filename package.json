@@ -1,0 +1,22 @@
+{
+  "name": "staketrial",
+  "version": "1.0.0",
+  "description": "ethDenver project",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wtait/stake-trial.git"
+  },
+  "author": "wade tait",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/wtait/stake-trial/issues"
+  },
+  "homepage": "https://github.com/wtait/stake-trial#readme"
+}
