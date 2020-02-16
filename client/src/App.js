@@ -12,7 +12,7 @@ const App = () => {
         <Suspense fallback={<Loading />}>
           <Nav />
           <Route path="/" exact component={Home}></Route>
-          <Route path="/detail/:id" exact component={Detail}></Route>
+          <Route path="/dapp/:id" exact component={Detail}></Route>
         </Suspense>
       </BrowserRouter>
     </div>
