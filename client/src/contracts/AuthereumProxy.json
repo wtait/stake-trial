@@ -1,0 +1,1324 @@
+{
+  "contractName": "AuthereumProxy",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_logic",
+          "type": "address"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "authereumProxyVersion",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "impl",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_logic\",\"type\":\"address\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"constructor\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"constant\":true,\"inputs\":[],\"name\":\"authereumProxyVersion\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"impl\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Authereum, Inc.\",\"details\":\"The Authereum Proxy.\",\"methods\":{\"constructor\":{\"details\":\"Set the implementation in the constructor\",\"params\":{\"_logic\":\"Address of the logic contract\"}},\"implementation()\":{\"details\":\"Returns the current implementation.\",\"return\":\"Address of the current implementation\"}},\"title\":\"AuthereumProxy\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/james/Documents/eth_dev/staked/contracts/contracts/upgradeability/AuthereumProxy.sol\":\"AuthereumProxy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/james/Documents/eth_dev/staked/contracts/contracts/upgradeability/AuthereumProxy.sol\":{\"keccak256\":\"0x902bf699d0f1dd473af4750dd702d4b4cb1884cf2a7abe5a3c24dc4b2369988f\",\"urls\":[\"bzz-raw://1b23f367b85392592d9758707c850e1f1c97c926e5d17df0a8dfe5e927f02dbb\",\"dweb:/ipfs/QmfF65VCH8xnBq4KJhHwGCkft7sj7QwdGw6FrniWtapF6r\"]}},\"version\":1}",
+  "bytecode": "0x60806040526040516103753803806103758339818101604052610025919081019061006c565b60007f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc60001b905081815550506100de565b600081519050610066816100c7565b92915050565b60006020828403121561007e57600080fd5b600061008c84828501610057565b91505092915050565b60006100a0826100a7565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6100d081610095565b81146100db57600080fd5b50565b610288806100ed6000396000f3fe6080604052600436106100295760003560e01c80635bea7d5d1461006e5780635c60da1b14610099575b600080369050141561003a5761006c565b60006100446100c4565b90503660008037600080366000845af43d6000803e8060008114610067573d6000f35b3d6000fd5b005b34801561007a57600080fd5b506100836100f5565b6040516100909190610191565b60405180910390f35b3480156100a557600080fd5b506100ae6100c4565b6040516100bb9190610176565b60405180910390f35b6000807f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc60001b9050805491505090565b6040518060400160405280600a81526020017f323031393130323530300000000000000000000000000000000000000000000081525081565b610137816101cf565b82525050565b6000610148826101b3565b61015281856101be565b9350610162818560208601610201565b61016b81610234565b840191505092915050565b600060208201905061018b600083018461012e565b92915050565b600060208201905081810360008301526101ab818461013d565b905092915050565b600081519050919050565b600082825260208201905092915050565b60006101da826101e1565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60005b8381101561021f578082015181840152602081019050610204565b8381111561022e576000848401525b50505050565b6000601f19601f830116905091905056fea365627a7a72315820b84d0711f95919559860fc2db06f2f25f8a3ff4ee3c489e32d5d5651433f30026c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x6080604052600436106100295760003560e01c80635bea7d5d1461006e5780635c60da1b14610099575b600080369050141561003a5761006c565b60006100446100c4565b90503660008037600080366000845af43d6000803e8060008114610067573d6000f35b3d6000fd5b005b34801561007a57600080fd5b506100836100f5565b6040516100909190610191565b60405180910390f35b3480156100a557600080fd5b506100ae6100c4565b6040516100bb9190610176565b60405180910390f35b6000807f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc60001b9050805491505090565b6040518060400160405280600a81526020017f323031393130323530300000000000000000000000000000000000000000000081525081565b610137816101cf565b82525050565b6000610148826101b3565b61015281856101be565b9350610162818560208601610201565b61016b81610234565b840191505092915050565b600060208201905061018b600083018461012e565b92915050565b600060208201905081810360008301526101ab818461013d565b905092915050565b600081519050919050565b600082825260208201905092915050565b60006101da826101e1565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60005b8381101561021f578082015181840152602081019050610204565b8381111561022e576000848401525b50505050565b6000601f19601f830116905091905056fea365627a7a72315820b84d0711f95919559860fc2db06f2f25f8a3ff4ee3c489e32d5d5651433f30026c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "149:2189:7:-;;;696:156;;;;;;;;;;;;;;;;;;;;;;;749:12;516:66;764:19;;749:34;;829:6;823:4;816:20;802:44;;149:2189;;5:134:-1;;89:6;83:13;74:22;;101:33;128:5;101:33;;;68:71;;;;;146:263;;261:2;249:9;240:7;236:23;232:32;229:2;;;277:1;274;267:12;229:2;312:1;329:64;385:7;376:6;365:9;361:22;329:64;;;319:74;;291:108;223:186;;;;;416:91;;478:24;496:5;478:24;;;467:35;;461:46;;;;514:121;;587:42;580:5;576:54;565:65;;559:76;;;;642:117;711:24;729:5;711:24;;;704:5;701:35;691:2;;750:1;747;740:12;691:2;685:74;;149:2189:7;;;;;;;",
+  "deployedSourceMap": "149:2189:7:-;;;;;;;;;;;;;;;;;;;;;;;1224:1;1205:8;;:15;;:20;1201:33;;;1227:7;;1201:33;1243:23;1269:16;:14;:16::i;:::-;1243:42;;1564:12;1561:1;1558;1545:32;1773:1;1770;1756:12;1753:1;1736:15;1731:3;1718:57;1849:14;1846:1;1843;1828:36;1885:6;1957:1;1952:36;;;;2021:14;2018:1;2011:25;1952:36;1971:14;1968:1;1961:25;1305:743;149:2189;179:59;;8:9:-1;5:2;;;30:1;27;20:12;5:2;179:59:7;;;:::i;:::-;;;;;;;;;;;;;;;;2163:173;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2163:173:7;;;:::i;:::-;;;;;;;;;;;;;;;;;2210:12;2234;516:66;2249:19;;2234:34;;2315:4;2309:11;2301:19;;2287:43;;:::o;179:59::-;;;;;;;;;;;;;;;;;;;:::o;5:113:-1:-;88:24;106:5;88:24;;;83:3;76:37;70:48;;;125:339;;233:35;262:5;233:35;;;280:71;344:6;339:3;280:71;;;273:78;;356:52;401:6;396:3;389:4;382:5;378:16;356:52;;;429:29;451:6;429:29;;;424:3;420:39;413:46;;213:251;;;;;;471:213;;589:2;578:9;574:18;566:26;;603:71;671:1;660:9;656:17;647:6;603:71;;;560:124;;;;;691:293;;825:2;814:9;810:18;802:26;;875:9;869:4;865:20;861:1;850:9;846:17;839:47;900:74;969:4;960:6;900:74;;;892:82;;796:188;;;;;991:118;;1081:5;1075:12;1065:22;;1046:63;;;;1117:163;;1232:6;1227:3;1220:19;1269:4;1264:3;1260:14;1245:29;;1213:67;;;;;1288:91;;1350:24;1368:5;1350:24;;;1339:35;;1333:46;;;;1386:121;;1459:42;1452:5;1448:54;1437:65;;1431:76;;;;1515:268;1580:1;1587:101;1601:6;1598:1;1595:13;1587:101;;;1677:1;1672:3;1668:11;1662:18;1658:1;1653:3;1649:11;1642:39;1623:2;1620:1;1616:10;1611:15;;1587:101;;;1703:6;1700:1;1697:13;1694:2;;;1768:1;1759:6;1754:3;1750:16;1743:27;1694:2;1564:219;;;;;1791:97;;1879:2;1875:7;1870:2;1863:5;1859:14;1855:28;1845:38;;1839:49;;;",
+  "source": "pragma solidity 0.5.16;\npragma experimental ABIEncoderV2;\n\n/**\n * @title AuthereumProxy\n * @author Authereum, Inc.\n * @dev The Authereum Proxy.\n */\n\ncontract AuthereumProxy {\n    string constant public authereumProxyVersion = \"2019102500\";\n\n    /// @dev Storage slot with the address of the current implementation.\n    /// @notice This is the keccak-256 hash of \"eip1967.proxy.implementation\" subtracted \n    /// @notice by 1, and is validated in the constructor.\n    bytes32 internal constant IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;\n\n    /// @dev Set the implementation in the constructor\n    /// @param _logic Address of the logic contract\n    constructor(address _logic) public payable {\n        bytes32 slot = IMPLEMENTATION_SLOT;\n        assembly {\n            sstore(slot, _logic)\n        }\n    }\n\n    /// @dev Fallback function\n    /// @notice A payable fallback needs to be implemented in the implementation contract\n    /// @notice This is a low level function that doesn't return to its internal call site.\n    /// @notice It will return to the external caller whatever the implementation returns.\n    function () external payable {\n        if (msg.data.length == 0) return;\n        address _implementation = implementation();\n\n        assembly {\n            // Copy msg.data. We take full control of memory in this inline assembly\n            // block because it will not return to Solidity code. We overwrite the\n            // Solidity scratch pad at memory position 0.\n            calldatacopy(0, 0, calldatasize)\n\n            // Call the implementation.\n            // out and outsize are 0 because we don't know the size yet.\n            let result := delegatecall(gas, _implementation, 0, calldatasize, 0, 0)\n\n            // Copy the returned data.\n            returndatacopy(0, 0, returndatasize)\n\n            switch result\n            // delegatecall returns 0 on error.\n            case 0 { revert(0, returndatasize) }\n            default { return(0, returndatasize) }\n        }\n    }\n\n    /// @dev Returns the current implementation.\n    /// @return Address of the current implementation\n    function implementation() public view returns (address impl) {\n        bytes32 slot = IMPLEMENTATION_SLOT;\n        assembly {\n            impl := sload(slot)\n        }\n    }\n}",
+  "sourcePath": "/Users/james/Documents/eth_dev/staked/contracts/contracts/upgradeability/AuthereumProxy.sol",
+  "ast": {
+    "absolutePath": "/Users/james/Documents/eth_dev/staked/contracts/contracts/upgradeability/AuthereumProxy.sol",
+    "exportedSymbols": {
+      "AuthereumProxy": [
+        687
+      ]
+    },
+    "id": 688,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 640,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:7"
+      },
+      {
+        "id": 641,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "24:33:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title AuthereumProxy\n@author Authereum, Inc.\n@dev The Authereum Proxy.",
+        "fullyImplemented": true,
+        "id": 687,
+        "linearizedBaseContracts": [
+          687
+        ],
+        "name": "AuthereumProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 644,
+            "name": "authereumProxyVersion",
+            "nodeType": "VariableDeclaration",
+            "scope": 687,
+            "src": "179:59:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 642,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "179:6:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32303139313032353030",
+              "id": 643,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "226:12:7",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_c69433a8e60f74d82ae7653e88cf357366350d7c029417c3927de83d0dabec92",
+                "typeString": "literal_string \"2019102500\""
+              },
+              "value": "2019102500"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 647,
+            "name": "IMPLEMENTATION_SLOT",
+            "nodeType": "VariableDeclaration",
+            "scope": 687,
+            "src": "468:114:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 645,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "468:7:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307833363038393461313362613161333231303636376338323834393264623938646361336532303736636333373335613932306133636135303564333832626263",
+              "id": 646,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "516:66:7",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_24440054405305269366569402256811496959409073762505157381672968839269610695612_by_1",
+                "typeString": "int_const 2444...(69 digits omitted)...5612"
+              },
+              "value": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 657,
+              "nodeType": "Block",
+              "src": "739:113:7",
+              "statements": [
+                {
+                  "assignments": [
+                    653
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 653,
+                      "name": "slot",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 657,
+                      "src": "749:12:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      },
+                      "typeName": {
+                        "id": 652,
+                        "name": "bytes32",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "749:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 655,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "id": 654,
+                    "name": "IMPLEMENTATION_SLOT",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 647,
+                    "src": "764:19:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "749:34:7"
+                },
+                {
+                  "externalReferences": [
+                    {
+                      "slot": {
+                        "declaration": 653,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "823:4:7",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "_logic": {
+                        "declaration": 649,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "829:6:7",
+                        "valueSize": 1
+                      }
+                    }
+                  ],
+                  "id": 656,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{ sstore(slot, _logic) }",
+                  "src": "793:53:7"
+                }
+              ]
+            },
+            "documentation": "@dev Set the implementation in the constructor\n @param _logic Address of the logic contract",
+            "id": 658,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 650,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 649,
+                  "name": "_logic",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 658,
+                  "src": "708:14:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 648,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "708:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "707:16:7"
+            },
+            "returnParameters": {
+              "id": 651,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "739:0:7"
+            },
+            "scope": 687,
+            "src": "696:156:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 674,
+              "nodeType": "Block",
+              "src": "1191:863:7",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 665,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 661,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2992,
+                          "src": "1205:3:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 662,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "data",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1205:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      },
+                      "id": 663,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1205:15:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 664,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1224:1:7",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "1205:20:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 667,
+                  "nodeType": "IfStatement",
+                  "src": "1201:33:7",
+                  "trueBody": {
+                    "expression": null,
+                    "functionReturnParameters": 660,
+                    "id": 666,
+                    "nodeType": "Return",
+                    "src": "1227:7:7"
+                  }
+                },
+                {
+                  "assignments": [
+                    669
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 669,
+                      "name": "_implementation",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 674,
+                      "src": "1243:23:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 668,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1243:7:7",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 672,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 670,
+                      "name": "implementation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 686,
+                      "src": "1269:14:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                        "typeString": "function () view returns (address)"
+                      }
+                    },
+                    "id": 671,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1269:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1243:42:7"
+                },
+                {
+                  "externalReferences": [
+                    {
+                      "_implementation": {
+                        "declaration": 669,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "1736:15:7",
+                        "valueSize": 1
+                      }
+                    }
+                  ],
+                  "id": 673,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    calldatacopy(0, 0, calldatasize())\n    let result := delegatecall(gas(), _implementation, 0, calldatasize(), 0, 0)\n    returndatacopy(0, 0, returndatasize())\n    switch result\n    case 0 { revert(0, returndatasize()) }\n    default { return(0, returndatasize()) }\n}",
+                  "src": "1296:752:7"
+                }
+              ]
+            },
+            "documentation": "@dev Fallback function\n @notice A payable fallback needs to be implemented in the implementation contract\n @notice This is a low level function that doesn't return to its internal call site.\n @notice It will return to the external caller whatever the implementation returns.",
+            "id": 675,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 659,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1171:2:7"
+            },
+            "returnParameters": {
+              "id": 660,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1191:0:7"
+            },
+            "scope": 687,
+            "src": "1162:892:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 685,
+              "nodeType": "Block",
+              "src": "2224:112:7",
+              "statements": [
+                {
+                  "assignments": [
+                    681
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 681,
+                      "name": "slot",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 685,
+                      "src": "2234:12:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      },
+                      "typeName": {
+                        "id": 680,
+                        "name": "bytes32",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2234:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 683,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "id": 682,
+                    "name": "IMPLEMENTATION_SLOT",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 647,
+                    "src": "2249:19:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2234:34:7"
+                },
+                {
+                  "externalReferences": [
+                    {
+                      "impl": {
+                        "declaration": 678,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "2301:4:7",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "slot": {
+                        "declaration": 681,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "2315:4:7",
+                        "valueSize": 1
+                      }
+                    }
+                  ],
+                  "id": 684,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{ impl := sload(slot) }",
+                  "src": "2278:52:7"
+                }
+              ]
+            },
+            "documentation": "@dev Returns the current implementation.\n @return Address of the current implementation",
+            "id": 686,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "implementation",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 676,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2186:2:7"
+            },
+            "returnParameters": {
+              "id": 679,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 678,
+                  "name": "impl",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "2210:12:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 677,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2210:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2209:14:7"
+            },
+            "scope": 687,
+            "src": "2163:173:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 688,
+        "src": "149:2189:7"
+      }
+    ],
+    "src": "0:2338:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/james/Documents/eth_dev/staked/contracts/contracts/upgradeability/AuthereumProxy.sol",
+    "exportedSymbols": {
+      "AuthereumProxy": [
+        687
+      ]
+    },
+    "id": 688,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 640,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:7"
+      },
+      {
+        "id": 641,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "24:33:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title AuthereumProxy\n@author Authereum, Inc.\n@dev The Authereum Proxy.",
+        "fullyImplemented": true,
+        "id": 687,
+        "linearizedBaseContracts": [
+          687
+        ],
+        "name": "AuthereumProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 644,
+            "name": "authereumProxyVersion",
+            "nodeType": "VariableDeclaration",
+            "scope": 687,
+            "src": "179:59:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 642,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "179:6:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32303139313032353030",
+              "id": 643,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "226:12:7",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_c69433a8e60f74d82ae7653e88cf357366350d7c029417c3927de83d0dabec92",
+                "typeString": "literal_string \"2019102500\""
+              },
+              "value": "2019102500"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 647,
+            "name": "IMPLEMENTATION_SLOT",
+            "nodeType": "VariableDeclaration",
+            "scope": 687,
+            "src": "468:114:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 645,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "468:7:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307833363038393461313362613161333231303636376338323834393264623938646361336532303736636333373335613932306133636135303564333832626263",
+              "id": 646,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "516:66:7",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_24440054405305269366569402256811496959409073762505157381672968839269610695612_by_1",
+                "typeString": "int_const 2444...(69 digits omitted)...5612"
+              },
+              "value": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 657,
+              "nodeType": "Block",
+              "src": "739:113:7",
+              "statements": [
+                {
+                  "assignments": [
+                    653
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 653,
+                      "name": "slot",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 657,
+                      "src": "749:12:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      },
+                      "typeName": {
+                        "id": 652,
+                        "name": "bytes32",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "749:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 655,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "id": 654,
+                    "name": "IMPLEMENTATION_SLOT",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 647,
+                    "src": "764:19:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "749:34:7"
+                },
+                {
+                  "externalReferences": [
+                    {
+                      "slot": {
+                        "declaration": 653,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "823:4:7",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "_logic": {
+                        "declaration": 649,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "829:6:7",
+                        "valueSize": 1
+                      }
+                    }
+                  ],
+                  "id": 656,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{ sstore(slot, _logic) }",
+                  "src": "793:53:7"
+                }
+              ]
+            },
+            "documentation": "@dev Set the implementation in the constructor\n @param _logic Address of the logic contract",
+            "id": 658,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 650,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 649,
+                  "name": "_logic",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 658,
+                  "src": "708:14:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 648,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "708:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "707:16:7"
+            },
+            "returnParameters": {
+              "id": 651,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "739:0:7"
+            },
+            "scope": 687,
+            "src": "696:156:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 674,
+              "nodeType": "Block",
+              "src": "1191:863:7",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 665,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 661,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2992,
+                          "src": "1205:3:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 662,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "data",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1205:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      },
+                      "id": 663,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1205:15:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 664,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1224:1:7",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "1205:20:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 667,
+                  "nodeType": "IfStatement",
+                  "src": "1201:33:7",
+                  "trueBody": {
+                    "expression": null,
+                    "functionReturnParameters": 660,
+                    "id": 666,
+                    "nodeType": "Return",
+                    "src": "1227:7:7"
+                  }
+                },
+                {
+                  "assignments": [
+                    669
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 669,
+                      "name": "_implementation",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 674,
+                      "src": "1243:23:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 668,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1243:7:7",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 672,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 670,
+                      "name": "implementation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 686,
+                      "src": "1269:14:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                        "typeString": "function () view returns (address)"
+                      }
+                    },
+                    "id": 671,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1269:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1243:42:7"
+                },
+                {
+                  "externalReferences": [
+                    {
+                      "_implementation": {
+                        "declaration": 669,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "1736:15:7",
+                        "valueSize": 1
+                      }
+                    }
+                  ],
+                  "id": 673,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    calldatacopy(0, 0, calldatasize())\n    let result := delegatecall(gas(), _implementation, 0, calldatasize(), 0, 0)\n    returndatacopy(0, 0, returndatasize())\n    switch result\n    case 0 { revert(0, returndatasize()) }\n    default { return(0, returndatasize()) }\n}",
+                  "src": "1296:752:7"
+                }
+              ]
+            },
+            "documentation": "@dev Fallback function\n @notice A payable fallback needs to be implemented in the implementation contract\n @notice This is a low level function that doesn't return to its internal call site.\n @notice It will return to the external caller whatever the implementation returns.",
+            "id": 675,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 659,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1171:2:7"
+            },
+            "returnParameters": {
+              "id": 660,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1191:0:7"
+            },
+            "scope": 687,
+            "src": "1162:892:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 685,
+              "nodeType": "Block",
+              "src": "2224:112:7",
+              "statements": [
+                {
+                  "assignments": [
+                    681
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 681,
+                      "name": "slot",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 685,
+                      "src": "2234:12:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      },
+                      "typeName": {
+                        "id": 680,
+                        "name": "bytes32",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2234:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 683,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "id": 682,
+                    "name": "IMPLEMENTATION_SLOT",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 647,
+                    "src": "2249:19:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2234:34:7"
+                },
+                {
+                  "externalReferences": [
+                    {
+                      "impl": {
+                        "declaration": 678,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "2301:4:7",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "slot": {
+                        "declaration": 681,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "2315:4:7",
+                        "valueSize": 1
+                      }
+                    }
+                  ],
+                  "id": 684,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{ impl := sload(slot) }",
+                  "src": "2278:52:7"
+                }
+              ]
+            },
+            "documentation": "@dev Returns the current implementation.\n @return Address of the current implementation",
+            "id": 686,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "implementation",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 676,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2186:2:7"
+            },
+            "returnParameters": {
+              "id": 679,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 678,
+                  "name": "impl",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "2210:12:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 677,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2210:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2209:14:7"
+            },
+            "scope": 687,
+            "src": "2163:173:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 688,
+        "src": "149:2189:7"
+      }
+    ],
+    "src": "0:2338:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-02-16T03:07:49.804Z",
+  "devdoc": {
+    "author": "Authereum, Inc.",
+    "details": "The Authereum Proxy.",
+    "methods": {
+      "constructor": {
+        "details": "Set the implementation in the constructor",
+        "params": {
+          "_logic": "Address of the logic contract"
+        }
+      },
+      "implementation()": {
+        "details": "Returns the current implementation.",
+        "return": "Address of the current implementation"
+      }
+    },
+    "title": "AuthereumProxy"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
