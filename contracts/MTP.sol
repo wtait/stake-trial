@@ -44,8 +44,7 @@ contract MTP {
 // Events
     //StakerAdded
         event StakerAdded(
-            address indexed StakerAddress,
-            uint indexed numberOfStakers
+            address indexed stakerAddress
         );
     //TokenAdded
         event TokenAdded(
@@ -128,6 +127,8 @@ contract MTP {
                 staker_Stake_Balance_: 0
             }
         );
+
+        emit StakerAdded(stakerAddress_);
     }
         // addStakerToQeue
         // removeStaker
