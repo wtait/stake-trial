@@ -21,7 +21,7 @@ describe('ERC721', function () {
 
     describe('_mint(address, uint256)', function () {
 
-      context('with minted token', async function () {
+      context('with minted token', function () {
         beforeEach(async function () {
           await this.token.addMinter(owner, {from: creator});
           ({ logs: this.logs } = await this.token.mint(owner, tokenId, {from: creator}));
