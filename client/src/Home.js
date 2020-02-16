@@ -27,7 +27,7 @@ class Home extends Component {
       // Get the contract instance.
       const instance = new web3.eth.Contract(
         MTP.abi,
-        "0xE878eC7089824BB1fDf49e87C88bB7a31900220C"
+        "0x812e8e4E75359AA2ba31977Ef600a0b8D2E6ece5"
       );
 
       // Set web3, accounts, and contract to the state, and then proceed with an

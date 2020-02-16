@@ -25,6 +25,7 @@
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 const HDWalletProvider = require("@truffle/hdwallet-provider");
+const PrivateKeyProvider = require("truffle-privatekey-provider");
 
 module.exports = {
   /**
@@ -52,7 +53,10 @@ module.exports = {
 
     rinkeby: {
       provider: function() {
-        return new HDWalletProvider("2950965425A2B3ABE4164C3A39DA1D96892728B1660980794E534A811017F2E9", "https://rinkeby.infura.io/v3/52c3f45afcfe42c3b68ec83186092ff0")
+        return new PrivateKeyProvider(
+          "2950965425A2B3ABE4164C3A39DA1D96892728B1660980794E534A811017F2E9",
+          "https://rinkeby.infura.io/v3/52c3f45afcfe42c3b68ec83186092ff0"
+        );
       },
       network_id: 4
     }
