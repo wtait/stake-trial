@@ -1088,8 +1088,13 @@
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {},
+<<<<<<< HEAD
   "schemaVersion": "3.0.20",
   "updatedAt": "2020-02-16T09:27:52.159Z",
+=======
+  "schemaVersion": "3.0.19",
+  "updatedAt": "2020-02-16T09:28:18.916Z",
+>>>>>>> eb5060b7fb4aa70a00be5128d9e24e0f30d8f85f
   "devdoc": {
     "details": "ERC721 Token that can be irreversibly burned (destroyed).",
     "methods": {
