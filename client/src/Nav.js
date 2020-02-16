@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Menu, Button } from "semantic-ui-react";
+import { Container, Menu, Image, Button } from "semantic-ui-react";
+import Logo from "./assets/logo.png";
 
 const Nav = () => {
   return (
     <Menu secondary style={{ marginTop: "40px" }}>
       <Container>
         <Menu.Item as="a" href="/" header>
-          Logo
+          <Image centered size="large" src={Logo} />
         </Menu.Item>
         <Menu.Menu position="right">
           <Menu.Item>Home</Menu.Item>

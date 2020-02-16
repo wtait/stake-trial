@@ -10,7 +10,8 @@ import {
   Header,
   Card
 } from "semantic-ui-react";
-import Img from "./assets/kitties.jpg";
+import Cat from "./assets/kitties.jpg";
+import Dapp from "./assets/dapps.jpg";
 
 class Home extends Component {
   state = { storageValue: [], web3: null, accounts: null, contract: null };
@@ -68,7 +69,11 @@ class Home extends Component {
     return (
       <Container style={{ marginTop: "30px" }}>
         <Container style={{ background: "lightgray", padding: "40px" }}>
-          <Header as="h1" content="🚀 Supercharge your Dapp Adoption!" />
+          <Header
+            as="h1"
+            content="🚀 Supercharge your Dapp Adoption!"
+            style={{ fontSize: "50px" }}
+          />
           <p>
             StakedTrials! is a novel way to onboard new users by providing them
             with a trial that they just can't refuse. Using Metered Transfer
@@ -81,34 +86,63 @@ class Home extends Component {
         </Container>
         <Container style={{ marginTop: "30px" }}>
           <Card.Group itemsPerRow={4}>
-            {this.state.storageValue.map(item => (
-              <Card key={item.token_Address_}>
-                <Image src={Img} />
-                <Card.Content>
-                  <Card.Header>CryptoCats</Card.Header>
-                  <Card.Description>
-                    Own adorable digital furry cats, that are breedable, ownable
-                    and most of all super fun!
-                  </Card.Description>
-                </Card.Content>
-                <Card.Content extra>
-                  <Button
-                    as={Link}
-                    to={{
-                      pathname: `/detail/${item.token_id_}`,
-                      state: {
-                        tokenAddress: item.token_Address_,
-                        tokeId: item.token_id_,
-                        sender: "0x568f256B011AEa74620d83a330514aDb95618298"
-                      }
-                    }}
-                    color="blue"
-                  >
-                    Start
-                  </Button>
-                </Card.Content>
-              </Card>
-            ))}
+            {this.state.storageValue.map(item =>
+              item.token_id_ == "1" ? (
+                <Card key={item.token_Address_}>
+                  <Image src={Cat} />
+                  <Card.Content>
+                    <Card.Header>CryptoCats</Card.Header>
+                    <Card.Description>
+                      Own adorable digital furry cats, that are breedable,
+                      ownable and most of all super fun!
+                    </Card.Description>
+                  </Card.Content>
+                  <Card.Content extra>
+                    <Button
+                      as={Link}
+                      to={{
+                        pathname: `/dapp/${item.token_Address_}`,
+                        state: {
+                          tokenAddress: item.token_Address_,
+                          tokeId: item.token_id_,
+                          sender: "0x568f256B011AEa74620d83a330514aDb95618298"
+                        }
+                      }}
+                      color="blue"
+                    >
+                      Start
+                    </Button>
+                  </Card.Content>
+                </Card>
+              ) : (
+                <Card key={item.token_Address_}>
+                  <Image src={Dapp} />
+                  <Card.Content>
+                    <Card.Header>{`Dapp ${item.token_id_}`}</Card.Header>
+                    <Card.Description>
+                      This dapp does awesome stuff. How about starting a trial
+                      do learn and get used to doing awesome stuff?!?
+                    </Card.Description>
+                  </Card.Content>
+                  <Card.Content extra>
+                    <Button
+                      as={Link}
+                      to={{
+                        pathname: `/dapp/${item.token_Address_}`,
+                        state: {
+                          tokenAddress: item.token_Address_,
+                          tokeId: item.token_id_,
+                          sender: "0x568f256B011AEa74620d83a330514aDb95618298"
+                        }
+                      }}
+                      color="blue"
+                    >
+                      Start
+                    </Button>
+                  </Card.Content>
+                </Card>
+              )
+            )}
           </Card.Group>
         </Container>
       </Container>
