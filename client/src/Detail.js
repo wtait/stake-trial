@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MTP from "./contracts/MTP.json";
 import getWeb3 from "./getWeb3";
+
 import {
   Container,
   Modal,
@@ -18,10 +19,38 @@ import MetaMask from "./assets/metamask.png";
 class Detail extends Component {
   constructor(props) {
     super(props);
-    this.state = { web3: null, accounts: null, contract: null };
+    this.state = { web3: null, accounts: null };
   }
 
-  componentDidMount = () => {};
+  signIn = async () => {
+    const web3 = await getWeb3();
+    const accounts = await web3.eth.getAccounts();
+    const msgParams = [
+      {
+        type: "string", // Any valid solidity type
+        name: "Message", // Any string label you want
+        value: "Hi, Alice!" // The value to sign
+      },
+      {
+        type: "uint32",
+        name: "A number",
+        value: "1337"
+      }
+    ]; // Get the current account:web3.eth.getAccounts(function (err, accounts) {  if (!accounts) return  signMsg(msgParams, accounts[0])})
+    web3.currentProvider.sendAsync(
+      {
+        method: "eth_signTypedData",
+        params: [msgParams, accounts[0]],
+        from: accounts[0]
+      },
+      function(err, result) {
+        if (err) return console.error(err);
+        if (result.error) {
+          return console.error(result.error.message);
+        }
+      }
+    );
+  };
 
   render() {
     return (
@@ -54,7 +83,11 @@ class Detail extends Component {
                     <Modal.Content image>
                       <Image wrapped size="small" src={MetaMask} />
                       <Modal.Description>
-                        <Button color="blue" content="Login with MetaMask" />
+                        <Button
+                          color="blue"
+                          content="Login with MetaMask"
+                          onClick={this.signIn}
+                        />
                         <Divider clearing />
                       </Modal.Description>
                     </Modal.Content>
