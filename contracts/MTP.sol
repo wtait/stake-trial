@@ -134,6 +134,24 @@ contract MTP {
         return stakeChain[tokenId].length;
     }
         // mtpTransfer
+    function mtpTransfer(address tokenContract_, address to_, uint256 tokenId_) public {
+        require(_isMTPItem(tokenId_), "non fungible transfer: must deposit token to MTP first");
+
+        address from_ = msg.sender;
+
+        if(stakers[to_].staker_Address_ != to_) {
+            addStaker(to_);
+        }
+
+        Token storage t = tokens[tokenId_];
+
+        stakeChain[tokenId_].push(to_);
+        t.token_Stake_Balance_ += stakeChain[tokenId_].length;
+        updateBiboBalances(tokenId_);
+
+        ERC721Interface = IERC721(tokenContract_);
+        ERC721Interface.safeTransferFrom(from_, to_, tokenId_);
+    }
         // pauseTransfer
 
     // Internal functions
