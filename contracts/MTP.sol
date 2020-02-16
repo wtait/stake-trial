@@ -122,7 +122,15 @@ contract MTP {
 
         emit TokenAdded(contractAddress, tokenOwner, tokenId);
     }
-        // withdrawToken
+
+    // withdrawToken(address contractAddress, address tokenOwner, uint256 tokenId) {
+        //tokenOwner bibo balance >0 ?
+        //is tokenOwner root owner?
+        //burn token stakes
+        //remove token from mapping
+        //withdraw from proxy account
+    //}
+
 
 
     function addStaker(address stakerAddress_) public {
