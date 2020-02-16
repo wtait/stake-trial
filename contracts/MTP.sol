@@ -37,8 +37,7 @@ contract MTP {
         address token_Address_; //this is redundant
         uint256 token_id_; //for nft tokens
         uint token_Stake_Balance_;
-        //bool isPausable?
-        //bool isPaused?
+        bool is_paused_;
     }
 
 // Events
@@ -61,24 +60,30 @@ contract MTP {
         );
     //TokenTranferPaused
         event TokenTransferPaused(
-            uint256 indexed tokenID,
+            uint256 indexed tokenId,
             address indexed tokenHolder
         );
     //TokenTransferUnpaused
         event TokenTransferUnpaused(
-            uint256 indexed tokenID,
+            uint256 indexed tokenId,
             address indexed tokenHolder
         );
     //TokenWithdrawn
         event TokenWithdrawal(
             address indexed tokenContractAddress,
             address indexed tokenOwner,
-            uint256 indexed tokenID
+            uint256 indexed tokenId
         );
     //StakerRemoved
         event StakerRemoved(
             address indexed StakerAddress,
             uint indexed numberOfStakers
+        );
+    //tokenPaused
+        event TokenPaused(
+            address indexed tokenContractAddress,
+            address indexed tokenOwner,
+            uint256 indexed tokenId
         );
     //newMTPNetworkDeployed
     //newProxyFactoryDeployed
@@ -155,7 +160,17 @@ contract MTP {
         ERC721Interface = IERC721(tokenContract_);
         ERC721Interface.safeTransferFrom(from_, to_, tokenId_);
     }
-        // pauseTransfer
+
+
+    function pauseTransfer(address tokenContract_, uint256 tokenId, address tokenHolder)  public {
+
+        if(balances[tokenHolder] >= 0) {
+            Token storage t = tokens[tokenId];
+            t.is_paused_ = true;
+        }
+
+        emit TokenPaused(tokenContract_, tokenHolder, tokenId);
+    }
 
     // Internal functions
     //internal - only this  and contracts deriving from it can access
