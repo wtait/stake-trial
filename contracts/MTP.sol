@@ -140,7 +140,7 @@ contract MTP {
         //     uint stakersBefore = i;
         //     uint stakersAfter = tokenStakeChain.length - (i + 1);
         //     int  stakerNewStakes = int256(stakersAfter) - int256(stakersBefore);
-        //     balances[currentStakerAddress] += stakerNewStakes;
+        //     balances[currentStakerAddress] -= stakerNewStakes;
         // }
     // }
 
@@ -156,6 +156,7 @@ contract MTP {
         emit StakerAdded(stakerAddress_);
     }
         // addStakerToQeue
+            //
         // removeStaker
         // getStakeChainLength
     function getStakeChainLength(uint256 tokenId) public returns (uint) {
