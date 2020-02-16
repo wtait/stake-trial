@@ -139,6 +139,10 @@ contract MTP {
     // Internal functions
     //internal - only this  and contracts deriving from it can access
         // isMTPToken
+    function _isMTPItem(uint256 tokenId) internal view returns (bool) {
+        uint256 existingId = tokens[tokenId].token_id_;
+        return existingId == tokenId;
+    }
 
     // Private functions
     //private - can be accessed only from this contract
