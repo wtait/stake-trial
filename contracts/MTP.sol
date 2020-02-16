@@ -123,7 +123,7 @@ contract MTP {
         emit TokenAdded(contractAddress, tokenOwner, tokenId);
     }
 
-    // withdrawToken(address contractAddress, address tokenOwner, uint256 tokenId) {
+    // withdrawToken(address contractAddress, address tokenOwner, uint256 tokenId) public {
         //tokenOwner bibo balance >0 ?
         //is tokenOwner root owner?
         //burn token stakes
@@ -131,7 +131,18 @@ contract MTP {
         //withdraw from proxy account
     //}
 
+    // burnStakes(uint256 tokenId, ) private {
+        //
+        // address[] memory tokenStakeChain = stakeChain[tokenId];
 
+        // for(uint i = 0; i < tokenStakeChain.length; i++) {
+        //     address currentStakerAddress = tokenStakeChain[i];
+        //     uint stakersBefore = i;
+        //     uint stakersAfter = tokenStakeChain.length - (i + 1);
+        //     int  stakerNewStakes = int256(stakersAfter) - int256(stakersBefore);
+        //     balances[currentStakerAddress] += stakerNewStakes;
+        // }
+    // }
 
     function addStaker(address stakerAddress_) public {
         balances[stakerAddress_] = 0;
