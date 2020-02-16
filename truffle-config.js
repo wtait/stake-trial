@@ -56,7 +56,6 @@ module.exports = {
       },
       network_id: 4
     }
-  }
 
     // Another network with more advanced options...
     // advanced: {
