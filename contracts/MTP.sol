@@ -114,6 +114,8 @@ contract MTP {
         t_.token_Stake_Balance_ = 1;
         stakeChain[tokenId].push(contractAddress);
         stakeChain[tokenId].push(tokenOwner);
+
+        emit TokenAdded(contractAddress, tokenOwner, tokenId);
     }
         // withdrawToken
 
