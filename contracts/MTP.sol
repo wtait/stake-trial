@@ -85,6 +85,7 @@ contract MTP {
             address indexed tokenOwner,
             uint256 indexed tokenId
         );
+    //BurnStakes
     //newMTPNetworkDeployed
     //newProxyFactoryDeployed
     //ProxyCreated
