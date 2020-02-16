@@ -95,7 +95,7 @@ class Home extends Component {
                   <Button
                     as={Link}
                     to={{
-                      pathname: `/item/${item.token_id_}`,
+                      pathname: `/detail/${item.token_id_}`,
                       state: {
                         tokenAddress: item.token_Address_,
                         tokeId: item.token_id_,

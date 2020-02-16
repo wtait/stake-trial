@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Menu, Button } from "semantic-ui-react";
 
 const Nav = () => {
   return (
     <Menu secondary style={{ marginTop: "40px" }}>
       <Container>
-        <Menu.Item as="a" header>
+        <Menu.Item as="a" href="/" header>
           Logo
         </Menu.Item>
         <Menu.Menu position="right">

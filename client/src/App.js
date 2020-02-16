@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Loading from "./Loading";
 const Nav = lazy(() => import("./Nav"));
 const Home = lazy(() => import("./Home"));
+const Detail = lazy(() => import("./Detail"));
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <Suspense fallback={<Loading />}>
           <Nav />
           <Route path="/" exact component={Home}></Route>
+          <Route path="/detail/:id" exact component={Detail}></Route>
         </Suspense>
       </BrowserRouter>
     </div>
