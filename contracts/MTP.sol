@@ -116,6 +116,7 @@ contract MTP {
         t_.token_Address_ = contractAddress;
         t_.token_id_ = tokenId;
         t_.token_Stake_Balance_ = 1;
+        t_.is_paused_ = false;
         stakeChain[tokenId].push(contractAddress);
         stakeChain[tokenId].push(tokenOwner);
 
