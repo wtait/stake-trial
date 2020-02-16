@@ -1,16 +1,19 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import MTP from "./contracts/MTP.json";
 import getWeb3 from "./getWeb3";
 import {
   Container,
-  Divider,
+  Modal,
   Image,
   Button,
   Header,
-  Card
+  Card,
+  Grid,
+  Divider
 } from "semantic-ui-react";
-import Img from "./assets/kitties.jpg";
+import Cat from "./assets/kitties.jpg";
+import Dapp from "./assets/dapps.jpg";
+import MetaMask from "./assets/metamask.png";
 
 class Detail extends Component {
   constructor(props) {
@@ -18,50 +21,84 @@ class Detail extends Component {
     this.state = { web3: null, accounts: null, contract: null };
   }
 
-  componentDidMount = async () => {
-    try {
-      // Get network provider and web3 instance.
-      const web3 = await getWeb3();
-
-      // Use web3 to get the user's accounts.
-      const accounts = await web3.eth.getAccounts();
-
-      // Get the contract instance.
-      const instance = new web3.eth.Contract(
-        MTP.abi,
-        "0xE878eC7089824BB1fDf49e87C88bB7a31900220C"
-      );
-
-      // Set web3, accounts, and contract to the state, and then proceed with an
-      // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance });
-    } catch (error) {
-      // Catch any errors for any of the above operations.
-      alert(
-        `Failed to load web3, accounts, or contract. Check console for details.`
-      );
-      console.error(error);
-    }
-  };
+  componentDidMount = () => {};
 
   render() {
-    console.log(this.state.storageValue);
-
-    if (!this.state.web3) {
-      return <div>Loading Web3, accounts, and contract...</div>;
-    }
     return (
       <Container style={{ marginTop: "30px" }}>
         <Container style={{ background: "lightgray", padding: "40px" }}>
-          <Header as="h1" content="😻 CryptoCats!" />
+          <Image src={this.props.match.params.id == "1" ? Cat : Dapp} />
+          <Header
+            as="h1"
+            content="😻 CryptoCats!"
+            style={{ fontSize: "50px" }}
+          />
           <p>
             Own adorable digital furry cats, that are breedable, ownable and
             most of all super fun! Just login with your wallet and as soon as
             you sign, you can immediately select your CryptoCat and start
             playing!
           </p>
-          <Divider clearing />
-          <Button color="blue" content="Login with your wallet" />
+        </Container>
+        <Container style={{ marginTop: "30px" }}>
+          <Card.Group itemsPerRow={4}>
+            <Card key="1">
+              <Image src={Cat} />
+              <Card.Content>
+                <Card.Header>Denver Dawg</Card.Header>
+              </Card.Content>
+              <Card.Content extra>
+                <Modal trigger={<Button color="blue">Sire</Button>}>
+                  <Modal.Header>Select a login method</Modal.Header>
+                  <Grid centered>
+                    <Modal.Content image>
+                      <Image wrapped size="small" src={MetaMask} />
+                      <Modal.Description>
+                        <Button color="blue" content="Login with MetaMask" />
+                        <Divider clearing />
+                      </Modal.Description>
+                    </Modal.Content>
+                  </Grid>
+                </Modal>
+              </Card.Content>
+            </Card>
+            <Card key="2">
+              <Image src={Cat} />
+              <Card.Content>
+                <Card.Header>Super KATZ</Card.Header>
+              </Card.Content>
+              <Card.Content extra>
+                <Button color="blue">Sire</Button>
+              </Card.Content>
+            </Card>
+            <Card key="3">
+              <Image src={Cat} />
+              <Card.Content>
+                <Card.Header>Pity Kitty</Card.Header>
+              </Card.Content>
+              <Card.Content extra>
+                <Button color="blue">Sire</Button>
+              </Card.Content>
+            </Card>
+            <Card key="4">
+              <Image src={Cat} />
+              <Card.Content>
+                <Card.Header>Demo Kat</Card.Header>
+              </Card.Content>
+              <Card.Content extra>
+                <Button color="blue">Sire</Button>
+              </Card.Content>
+            </Card>
+            <Card key="5">
+              <Image src={Cat} />
+              <Card.Content>
+                <Card.Header>Slep Kat</Card.Header>
+              </Card.Content>
+              <Card.Content extra>
+                <Button color="blue">Sire</Button>
+              </Card.Content>
+            </Card>
+          </Card.Group>
         </Container>
       </Container>
     );
